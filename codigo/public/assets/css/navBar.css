@@ -1,0 +1,171 @@
+/* Estilização global */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Navbar estilizada */
+.navbar {
+    display: flex;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    flex-direction: column;
+}
+
+.logoimg {
+    width: 70px;
+    height: auto;
+}
+
+.navbar img {
+    margin-right: 10px;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #555;
+    font-weight: 500;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #007bff;
+}
+
+/* Menu off-canvas para dispositivos móveis */
+.offcanvas-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+    z-index: 1050;
+    padding-top: 15px;
+}
+
+.offcanvas-menu.active {
+    right: 0;
+}
+
+.offcanvas-menu .close-btn {
+    font-size: 1.5rem;
+    color: #333;
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.offcanvas-menu .nav-link {
+    color: #555;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.offcanvas-menu .nav-link:hover {
+    background-color: #f1f1f1;
+    color: #007bff;
+}
+
+/* Container principal para o dashboard com rolagem interna */
+.dashboard-container {
+    max-width: 1200px;
+    max-height: 80vh; /* Define uma altura máxima de 80% da altura da viewport */
+    overflow-y: auto; /* Adiciona rolagem vertical quando o conteúdo excede a altura máxima */
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Estilização opcional para a barra de rolagem */
+.dashboard-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.dashboard-container::-webkit-scrollbar-thumb {
+    background-color: #007bff;
+    border-radius: 4px;
+}
+
+.dashboard-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Título dentro do contêiner */
+.dashboard-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+/* Cards de usuários */
+.cards {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.cards h3 {
+    font-size: 1.2rem;
+    color: #007bff;
+    margin-bottom: 8px;
+}
+
+.cards p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.cards .edit-btn, .cards .delete-btn {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cards .edit-btn:hover, .cards .delete-btn:hover {
+    background-color: #0056b3;
+}
+
+.cards .delete-btn {
+    background-color: #dc3545;
+}
+
+.cards .delete-btn:hover {
+    background-color: #c82333;
+}
+
+#card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+}

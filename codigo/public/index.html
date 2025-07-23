@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - EcoDrive</title>
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/navBar.css">
+</head>
+<body>
+    <!-- Navbar para desktop e mobile -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+        <!-- Botão de menu apenas para dispositivos móveis -->
+        <button class="navbar-toggler d-lg-none" type="button" id="mobileMenuButton">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu normal para desktop -->
+        <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarMenu">
+            <img class="logoimg" src="./assets/images/logo.png" alt="EcoDrive" width="70px" onclick="window.location.href='index.html'">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="./models.html">Modelos</a></li>
+                <li class="nav-item"><a class="nav-link" href="./ranking.html">Ranking</a></li>
+                <li class="nav-item"><a href="./information.html" class="nav-link">Informações</a></li>
+                <li class="nav-item"><a href="./PerRes.html" class="nav-link">F.A.Q</a></li>
+                <li class="nav-item"><a class="nav-link" href="./cadastro.html">Cadastro</a></li>
+                <li class="nav-item"><a class="nav-link" href="./login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Menu off-canvas apenas para dispositivos móveis -->
+    <div class="offcanvas-menu d-lg-none" id="offCanvasMenu">
+        <button type="button" class="close-btn" id="closeMenuButton">&times;</button>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="./models.html">Modelos</a></li>
+            <li class="nav-item"><a class="nav-link" href="./ranking.html">Ranking</a></li>
+            <li class="nav-item"><a class="nav-link" href="./information.html">Informações</a></li>
+            <li class="nav-item"><a class="nav-link" href="./PerRes.html">F.A.Q</a></li>
+            <li class="nav-item"><a class="nav-link" href="./cadastro.html">Cadastro</a></li>
+            <li class="nav-item"><a class="nav-link" href="./login.html">Login</a></li>
+        </ul>
+    </div>
+
+    <header></header>
+    <main class="container mt-5">
+        <div class="jumbotron text-center">
+            <h1 class="display-4">Bem-vindo à EcoDrive</h1>
+            <p class="lead">Sua fonte confiável para informações sobre veículos elétricos e sustentáveis.</p>
+            <hr class="my-4">
+            <p>Nosso objetivo é fornecer dados precisos e atualizados sobre os melhores modelos de carros elétricos disponíveis no mercado, comparações detalhadas e rankings para ajudá-lo a tomar decisões informadas.</p>
+            <a class="btn btn-primary btn-lg" href="about.html" role="button">Saiba mais sobre nós</a>
+        </div>
+
+        <!-- Seção Sobre Nós -->
+        <section class="about-us mt-5">
+            <p class="text-center">A EcoDrive é dedicada a promover a mobilidade sustentável através de informações detalhadas e atualizadas sobre veículos elétricos. Nossa missão é ajudar você a fazer escolhas informadas e conscientes.</p>
+        </section>
+
+        <!-- Seção Modelos Populares -->
+        <section class="popular-models mt-5">
+            <h2 class="text-center">Modelos Populares</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./assets/images/BYD_DOLPHIN.jpg" class="card-img-top" alt="BYD Dolphin">
+                        <div class="card-body">
+                            <h5 class="card-title">BYD Dolphin</h5>
+                            <p class="card-text">Autonomia: 330 KM's<br>Preço: R$ 149.800</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./assets/images/TESLA_MODELY.jpg" class="card-img-top" alt="Tesla Model Y">
+                        <div class="card-body">
+                            <h5 class="card-title">Tesla Model Y</h5>
+                            <p class="card-text">Autonomia: 600 KM's<br>Preço: R$ 499.000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./assets/images/GWM_ORA.jpg" class="card-img-top" alt="GWM Ora">
+                        <div class="card-body">
+                            <h5 class="card-title">GWM Ora</h5>
+                            <p class="card-text">Autonomia: 319 KM's<br>Preço: R$ 150.000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Comparações -->
+        <section class="comparisons mt-5">
+            <h2 class="text-center">Comparações</h2>
+            <p class="text-center">Compare os melhores modelos de veículos elétricos e encontre o que melhor se adapta às suas necessidades.</p>
+            <div class="text-center">
+                <a class="btn btn-secondary" href="Comparativo.html" role="button">Comparar Modelos</a>
+            </div>
+        </section>
+
+        <!-- Seção Contato -->
+        <section class="contact mt-5">
+            <h2 class="text-center">Contato</h2>
+            <p class="text-center">Tem alguma dúvida ou precisa de mais informações? Entre em contato conosco!</p>
+            <div class="text-center">
+                <a class="btn btn-secondary" role="button">Fale Conosco</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p style="color: rgba(115, 115, 115, 0.53);">&copy; 2023 - Todos os direitos reservados</p>
+        <nav>
+            <ul>
+                <li><a href="#" style="color: rgba(115, 115, 115, 0.53);">Termos de uso</a></li>
+                <li><a href="#" style="color: rgba(115, 115, 115, 0.53);">Política de privacidade</a></li>
+                <li><a href="#" style="color: rgba(115, 115, 115, 0.53);">Sobre nós</a></li>
+                <li><a href="#" style="color: rgba(115, 115, 115, 0.53);">Contato</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/information.js"></script>
+</body>
+</html>

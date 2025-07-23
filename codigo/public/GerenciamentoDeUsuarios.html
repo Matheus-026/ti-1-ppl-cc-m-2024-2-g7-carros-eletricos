@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Usuários</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/navBar.css">
+</head>
+<body>
+    <!-- Navbar para desktop e mobile -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+        <img src="./assets/images/logo.png" alt="EcoDrive" width="70px" onclick="window.location.href='index.html'">
+        <!-- Botão de menu apenas para dispositivos móveis -->
+        <button class="navbar-toggler d-lg-none" type="button" id="mobileMenuButton">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu normal para desktop -->
+        <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarMenu">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="./Comparativo.html">Comparador</a></li>
+                <li class="nav-item"><a class="nav-link" href="./models.html">Modelos</a></li>
+                <li class="nav-item"><a class="nav-link" href="./ranking.html">Ranking</a></li>
+                <li class="nav-item"><a class="nav-link" href="./cadastro.html">Cadastro</a></li>
+                <li class="nav-item"><a class="nav-link" href="./login.html">Login</a></li>
+                <li class="nav-item"><a href="./information.html" class="nav-link">Informações</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Menu off-canvas apenas para dispositivos móveis -->
+    <div class="offcanvas-menu d-lg-none" id="offCanvasMenu">
+        <button type="button" class="close-btn" id="closeMenuButton">&times;</button>
+        <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="./Comparativo.html">Comparador</a></li>
+                <li class="nav-item"><a class="nav-link" href="./models.html">Modelos</a></li>
+                <li class="nav-item"><a class="nav-link" href="./ranking.html">Ranking</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">F.A.Q</a></li>
+                <li class="nav-item"><a href="./information.html" class="nav-link">Informações</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <div class="dashboard-container container mt-4">
+            <h2>Usuários Cadastrados</h2>
+            <div id="usersCards" class="d-flex flex-wrap justify-content-center"></div>
+        </div>
+    </main>
+
+    <!-- Modal de Edição -->
+    <div id="editModal" class="modal fade" tabindex="-1" role="dialog" style="display:none;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editar Usuário</h5>
+                    <button type="button" class="close" id="closeModal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="editForm">
+                        <div class="form-group">
+                            <label for="editNome">Nome</label>
+                            <input type="text" class="form-control" id="editNome" placeholder="Nome">
+                        </div>
+                        <div class="form-group">
+                            <label for="editEmail">Email</label>
+                            <input type="email" class="form-control" id="editEmail" placeholder="Email">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="saveEdit">Salvar</button>
+                    <button type="button" class="btn btn-secondary" id="closeModalFooter">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/adminGerenciamento.js"></script>
+</body>
+</html>

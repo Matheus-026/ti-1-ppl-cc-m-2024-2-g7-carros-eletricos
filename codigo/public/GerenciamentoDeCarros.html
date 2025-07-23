@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Carros</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/navBar.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+    <img src="./assets/images/logo.png" alt="EcoDrive" width="70px" onclick="window.location.href='index.html'">
+    <!-- Botão de menu apenas para dispositivos móveis -->
+    <button class="navbar-toggler d-lg-none" type="button" id="mobileMenuButton">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu normal para desktop -->
+    <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarMenu">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="./Comparativo.html">Comparador</a></li>
+            <li class="nav-item"><a class="nav-link" href="./models.html">Modelos</a></li>
+            <li class="nav-item"><a class="nav-link" href="./ranking.html">Ranking</a></li>
+            <li class="nav-item"><a class="nav-link" href="./cadastro.html">Cadastro</a></li>
+            <li class="nav-item"><a class="nav-link" href="./login.html">Login</a></li>
+            <li class="nav-item"><a href="./information.html" class="nav-link">Informações</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Menu off-canvas apenas para dispositivos móveis -->
+<div class="offcanvas-menu d-lg-none" id="offCanvasMenu">
+    <button type="button" class="close-btn" id="closeMenuButton">&times;</button>
+    <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="./Comparativo.html">Comparador</a></li>
+            <li class="nav-item"><a class="nav-link" href="./models.html">Modelos</a></li>
+            <li class="nav-item"><a class="nav-link" href="./ranking.html">Ranking</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">F.A.Q</a></li>
+            <li class="nav-item"><a href="./information.html" class="nav-link">Informações</a></li>
+    </ul>
+</div>
+
+    <!-- Container -->
+    <main>
+        <div class="dashboard-container container mt-4">
+            <h2 class="text-center">Carros Cadastrados</h2>
+            <div id="carsCards" class="d-flex flex-wrap justify-content-center"></div>
+        </div>
+    </main>
+
+    <!-- Modal de Edição -->
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editar Carro</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="editCarId">
+                    <div class="form-group">
+                        <label for="editCarMarca">Marca</label>
+                        <input type="text" id="editCarMarca" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="editCarModelo">Modelo</label>
+                        <input type="text" id="editCarModelo" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="editCarAno">Ano</label>
+                        <input type="number" id="editCarAno" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="editCarAutonomia">Autonomia</label>
+                        <input type="text" id="editCarAutonomia" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="editCarPreco">Preço</label>
+                        <input type="text" id="editCarPreco" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="saveCarEdit" class="btn btn-primary">Salvar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/adminGerenciamentoCarros.js"></script>
+    
+</body>
+</html>

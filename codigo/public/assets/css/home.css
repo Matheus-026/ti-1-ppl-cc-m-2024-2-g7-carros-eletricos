@@ -1,0 +1,93 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #ffffff;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.navbar {
+    background-color: #007bff;
+}
+
+.navbar .nav-link {
+    color: #fff;
+}
+
+.navbar .nav-link:hover {
+    color: #ddd;
+}
+
+.jumbotron {
+    background-color: #e9ecef;
+    padding: 2rem 1rem;
+    border-radius: 0.3rem;
+}
+
+.jumbotron .display-4 {
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+.jumbotron .lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+footer {
+    background-color: #ffffff;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+}
+
+.about-us, .popular-models, .comparisons, .contact {
+    padding: 2rem 0;
+}
+
+.about-us h2, .popular-models h2, .comparisons h2, .contact h2 {
+    margin-bottom: 1rem;
+}
+
+.about-us p, .comparisons p, .contact p {
+    margin-bottom: 1.5rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}

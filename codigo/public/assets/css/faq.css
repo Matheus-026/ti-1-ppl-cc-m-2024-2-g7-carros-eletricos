@@ -1,0 +1,64 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.menu-container {
+    margin-top: 20px;
+    width: 65%;
+    height: 80px;
+    background-color: lightgray;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+}
+
+.menu button {
+    padding: 10px 20px;
+    border: 1px solid #333;
+    background-color: lightgray;
+    color: #333;
+    font-size: 15px;
+    border-radius: 50px;
+}
+
+
+h2 {
+    background-color: lightgrey;
+    padding: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    margin-bottom: 15px;
+}
+
+.accordion-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.accordion-body {
+    text-align: left;
+    padding: 15px;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    overflow: auto;
+}

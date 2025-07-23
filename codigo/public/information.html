@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar - Sim, Viaje!</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/navBar.css">
+    <link rel="stylesheet" href="./assets/css/information.css">
+</head>
+<body>
+    <!-- Navbar para desktop e mobile -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+        <!-- Botão de menu apenas para dispositivos móveis -->
+        <button class="navbar-toggler d-lg-none" type="button" id="mobileMenuButton">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu normal para desktop -->
+        <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarMenu">
+            <img class="logoimg" src="./assets/images/logo.png" alt="EcoDrive" width="70px" onclick="window.location.href='index.html'">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="./models.html">Modelos</a></li>
+                <li class="nav-item"><a class="nav-link" href="./ranking.html">Ranking</a></li>
+                <li class="nav-item"><a href="./information.html" class="nav-link">Informações</a></li>
+                <li class="nav-item"><a href="./PerRes.html" class="nav-link">F.A.Q</a></li>
+                <li class="nav-item"><a class="nav-link" href="./cadastro.html">Cadastro</a></li>
+                <li class="nav-item"><a class="nav-link" href="./login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Menu off-canvas apenas para dispositivos móveis -->
+    <div class="offcanvas-menu d-lg-none" id="offCanvasMenu">
+        <button type="button" class="close-btn" id="closeMenuButton">&times;</button>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="./models.html">Modelos</a></li>
+            <li class="nav-item"><a class="nav-link" href="./ranking.html">Ranking</a></li>
+            <li class="nav-item"><a href="./information.html" class="nav-link">Informações</a></li>
+            <li class="nav-item"><a href="./PerRes.html" class="nav-link">F.A.Q</a></li>
+            <li class="nav-item"><a class="nav-link" href="./cadastro.html">Cadastro</a></li>
+            <li class="nav-item"><a class="nav-link" href="./login.html">Login</a></li>
+        </ul>
+    </div>
+    <main>
+        <div class="main-container">
+            <section id="featured-news">
+                <!-- Destaque principal da notícia -->
+                <div id="highlighted-article" class="news-article">
+                    <img src="https://via.placeholder.com/800x400" alt="Destaque">
+                    <div class="news-content">
+                        <h2 class="news-title">Título da Notícia em Destaque</h2>
+                        <p class="news-description">Resumo da notícia em destaque. Esta é uma área para a notícia mais importante.</p>
+                        <a href="#" class="news-link">Leia mais</a>
+                    </div>
+                </div>
+            </section>
+            <section id="news-container">
+                <!-- As notícias secundárias serão carregadas aqui dinamicamente -->
+            </section>
+        </div>
+    </main>
+
+
+    <!-- JavaScript do Bootstrap e jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/information.js"></script>
+</body>
+</html>

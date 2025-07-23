@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/navBar.css">
+</head>
+<body>
+    <!-- Navbar para desktop e mobile -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+        <!-- Botão de menu apenas para dispositivos móveis -->
+        <button class="navbar-toggler d-lg-none" type="button" id="mobileMenuButton">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu normal para desktop -->
+        <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarMenu">
+            <img class="logoimg" src="./assets/images/logo.png" alt="EcoDrive" width="70px" onclick="window.location.href='index.html'">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="./models.html">Modelos</a></li>
+                <li class="nav-item"><a class="nav-link" href="./ranking.html">Ranking</a></li>
+                <li class="nav-item"><a href="./information.html" class="nav-link">Informações</a></li>
+                <li class="nav-item"><a href="./PerRes.html" class="nav-link">F.A.Q</a></li>
+                <li class="nav-item"><a class="nav-link" href="./cadastro.html">Cadastro</a></li>
+                <li class="nav-item"><a class="nav-link" href="./login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Menu off-canvas apenas para dispositivos móveis -->
+    <div class="offcanvas-menu d-lg-none" id="offCanvasMenu">
+        <button type="button" class="close-btn" id="closeMenuButton">&times;</button>
+        <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="./models.html">Modelos</a></li>
+                <li class="nav-item"><a class="nav-link" href="./ranking.html">Ranking</a></li>
+                <li class="nav-item"><a href="./information.html" class="nav-link">Informações</a></li>
+                <li class="nav-item"><a href="./PerRes.html" class="nav-link">F.A.Q</a></li>
+                <li class="nav-item"><a class="nav-link" href="./cadastro.html">Cadastro</a></li>
+                <li class="nav-item"><a class="nav-link" href="./login.html">Login</a></li>
+        </ul>
+    </div>
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="card p-4" style="width: 100%; max-width: 400px;">
+            <h3 class="text-center mb-3">Login</h3>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" class="form-control" id="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+            </form>
+            <button class="btn btn-secondary btn-block mt-3" onclick="window.location.href='login.html'">Login Usuário</button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const apiUrl = 'http://localhost:3000/usuarios';
+
+    // Verifica se está na página de login
+    if (document.getElementById('loginForm')) {
+        initLogin();
+    }
+
+    function initLogin() {
+        const loginForm = document.getElementById('loginForm');
+        const loginEmail = document.getElementById('email');
+        const loginSenha = document.getElementById('password');
+
+        // Função de login
+        loginForm.addEventListener('submit', async function (event) {
+            event.preventDefault(); // Previne o envio padrão do formulário
+            const email = loginEmail.value;
+            const senha = loginSenha.value;
+
+            try {
+                const response = await fetch(`${apiUrl}?email=${encodeURIComponent(email)}&senha=${encodeURIComponent(senha)}`);
+                const users = await response.json();
+
+                if (users.length > 0 && users[0].isAdmin) {
+                    alert('Login bem-sucedido!');
+                    window.location.href = "./GerenciamentoDeUsuarios.html";
+                } else {
+                    alert('Email ou senha incorretos.');
+                }
+            } catch (error) {
+                console.error('Erro ao fazer login:', error);
+            }
+        });
+    }
+});
+
+    </script>
+</body>
+</html>

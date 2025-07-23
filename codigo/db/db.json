@@ -1,0 +1,147 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "login": "admin",
+      "senha": "123",
+      "nome": "Administrador do Sistema",
+      "email": "admin@abc.com",
+      "isAdmin": true
+    },
+    {
+      "id": "2",
+      "login": "user",
+      "senha": "123",
+      "nome": "Usuario Comum",
+      "email": "user@abc.com"
+    },
+    {
+      "login": "rommel",
+      "senha": "123",
+      "nome": "Rommel",
+      "email": "rommel@gmail.com",
+      "id": "3"
+    },
+    {
+      "id": "4",
+      "nome": "user",
+      "email": "xxxxxxxx@gmail.com",
+      "senha": "12345678"
+    }
+  ],
+  "carro": [
+    {
+      "id": "1",
+      "imagem": "/assets/images/BYD_DOLPHIN.jpg",
+      "marca": "BYD",
+      "modelo": "DOLPHIN",
+      "ano": "2022",
+      "autonomia": "330 KM's",
+      "preco": "R$ 149.800"
+    },
+    {
+      "id": "2",
+      "imagem": "/assets/images/TESLA_MODELY.jpg",
+      "marca": "TESLA",
+      "modelo": "MODEL Y",
+      "ano": "2024",
+      "autonomia": "600 KM's",
+      "preco": "R$ 499.000"
+    },
+    {
+      "id": "3",
+      "imagem": "/assets/images/GWM_ORA.jpg",
+      "marca": "GWM",
+      "modelo": "ORA",
+      "ano": "2019",
+      "autonomia": "319 KM'S",
+      "preco": "R$ 150.000"
+    },
+    {
+      "id": "4",
+      "imagem": "/assets/images/TESLA_MODELS.jpg",
+      "marca": "TESLA",
+      "modelo": "MODEL S",
+      "ano": "2024",
+      "autonomia": "634 KM's",
+      "preco": "R$ 1.276.840"
+    },
+    {
+      "id": "5",
+      "imagem": "/assets/images/BYD_SEAL.jpg",
+      "marca": "BYD",
+      "modelo": "SEAL",
+      "ano": "2023",
+      "autonomia": "372 KM's",
+      "preco": "R$ 296.800"
+    },
+    {
+      "id": "6",
+      "imagem": "/assets/images/GWM_HAVAL.jpg",
+      "marca": "GWM",
+      "modelo": "HAVAL",
+      "ano": "2022",
+      "autonomia": "113 KM'S",
+      "preco": "R$ 214.000"
+    },
+    {
+      "id": "7",
+      "imagem": "/assets/images/BWD_SONG.jpg",
+      "marca": "BYD",
+      "modelo": "SONG",
+      "ano": "2024",
+      "autonomia": "85 KM's",
+      "preco": "R$ 229.800"
+    },
+    {
+      "id": "8",
+      "imagem": "/assets/images/TESLA_MODEL3.jpg",
+      "marca": "TESLA",
+      "modelo": "MODEL 3",
+      "ano": "2021",
+      "autonomia": "430 KM's",
+      "preco": "R$ 389.000"
+    },
+    {
+      "id": "9",
+      "imagem": "/assets/images/TESLA_CYBERTRUCK.jpg",
+      "marca": "TESLA",
+      "modelo": "CYBERTRUCK",
+      "ano": "2024",
+      "autonomia": "515 KM's",
+      "preco": "R$ 550.000"
+    }
+  ],
+  "faq": [
+    {
+      "id": "1e89e3d9-c42a-4c76-a1f2-6f58bcbf7fd2",
+      "question": "Quanto tempo leva para carregar um carro elétrico ?",
+      "answer": "O tempo de carregamento depende do tipo de carregador usado. Com uma tomada residencial padrão, pode levar de 8 a 12 horas, enquanto carregadores rápidos podem reduzir o tempo para 30-60 minutos para uma carga de 80%."
+    },
+    {
+      "id": "e5783a26-b0cb-47a4-bc47-bf034123a125",
+      "question": "Qual é a autonomia de um carro elétrico ?",
+      "answer": "A maioria dos carros elétricos modernos tem uma autonomia de 250 a 400 km com uma carga completa, embora modelos premium possam superar os 500 km."
+    },
+    {
+      "id": "29cb6fae-cb0b-4f93-8db7-83e1481f75a6",
+      "question": "Os carros elétricos são mais caros para manter ?",
+      "answer": "Carros elétricos geralmente têm custos de manutenção mais baixos porque possuem menos peças móveis em comparação aos veículos a gasolina. Não é necessário trocar o óleo, e os freios tendem a durar mais devido à frenagem regenerativa."
+    },
+    {
+      "id": "9b1d2ba2-03e5-45e6-a558-76222d2f8aa9",
+      "question": "Como o desempenho de um carro elétrico se compara a um carro a combustão?",
+      "answer": "Carros elétricos frequentemente oferecem melhor aceleração devido ao torque instantâneo dos motores elétricos. Eles podem parecer mais responsivos e suaves em comparação com carros a combustão."
+    },
+    {
+      "id": "1b1283b5-f34d-48a1-b7be-64bff45c23c6",
+      "question": "Posso carregar meu carro elétrico em casa ?",
+      "answer": "Sim, a maioria dos carros elétricos pode ser carregada em casa usando uma tomada padrão ou um carregador residencial dedicado, que é mais rápido. O carregamento em casa é conveniente e pode ser feito durante a noite."
+    },
+    {
+      "id": "f4e7843c-8d89-4d7d-a120-2ae9f30b4913",
+      "question": "Quanto tempo duram as baterias de carros elétricos ?",
+      "answer": "A maioria das baterias de carros elétricos é projetada para durar de 8 a 10 anos ou cerca de 160.000 a 240.000 km antes que a capacidade diminua significativamente. Os fabricantes geralmente oferecem garantias que cobrem esse período."
+    }
+  ]
+}
